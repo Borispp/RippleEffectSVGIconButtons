@@ -1,0 +1,155 @@
+/* Demo specific styles */
+
+.btn-container {
+	position: relative;
+	text-align: right;
+	width: 350px;
+	max-width: 100%;
+	display: block;
+	cursor: pointer;
+	font-weight: 700;
+	font-size: 1.4em;
+	margin: auto;
+	margin-top: 1em;
+	margin-bottom: 1em;	
+    padding: 1em;
+    background: rgba(255,255,255,.2);
+    border-radius: 4px;
+    -webkit-transition: 200ms background cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 200ms background cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.1), 0 3px 3px rgba(0, 0, 0, 0.05), 0 3px 2px -2px rgba(0, 0, 0, 0.2);
+	overflow: hidden
+}
+
+.btn-container.small {
+	width: 200px;
+	font-size: 0.85em;
+    padding: 0.95em;
+    border-radius: 2px;
+}
+
+.btn-container.alt {
+    padding-bottom: 0.8em;
+}
+
+.btn {
+	color: rgba(255,255,255,1);
+}
+
+.btn:hover ,
+.btn:focus {
+	outline: none;
+	color: rgba(255,255,255,1);
+}
+
+.btn:hover span,
+.btn:hover i{
+	opacity: 0.85
+}
+
+.btn-container.small .btn i {
+	position: relative;
+	top: 5px
+}
+
+.btn-container.alt .btn i {
+	position: relative;
+	top: 4px
+}
+
+.btn span{
+	float: left;
+	line-height: 2.2
+}
+
+/* ripple styles */
+.ripple {
+	display: block; position: absolute;
+	background: rgba(0,0,0,0.2);
+	border-radius: 100%;
+	transform: scale(0);
+}
+
+.ripple.animate {animation: ripple 0.65s linear;}
+
+@keyframes ripple {
+	100% {opacity: 0; transform: scale(2.5);}
+}
+
+/* Sections */
+section {
+	padding: 15em 0;
+	text-align: center;
+	margin: 1em;
+}
+
+#app {
+	background: #4cb5b7
+}
+
+#twitter {
+	background: #55acee
+}
+
+#facebook {
+	background: #3b5998
+}
+
+#googleplus {
+	background: #dc4e41
+}
+
+#linkedin {
+	background: #007bb5
+}
+
+#pinterest {
+	background: #d13d44
+}
+
+#instagram {
+	background: #125688
+}
+
+#youtube {
+	background: #bb2323
+}
+
+#paypal {
+	background: #009cde
+}
+
+#github {
+	background: #eec347;
+}
+
+#cart {
+	background: #d3c959;
+}
+
+@media screen and (max-width: 50em) {
+
+	.btn-container{
+		text-align: center;
+		padding: 20px;
+		width: 280px;
+		font-size: 1.1em;
+	}
+
+	.btn span{
+		float: none;
+		display: block;
+		margin-bottom: 6px;
+	}
+	
+	.btn-container.small .btn i,
+	.btn-container.alt .btn i {
+		top: 0
+	}
+
+	section {
+		padding: 5em 0;
+		margin: 0 0 1em;
+	}
+
+}
